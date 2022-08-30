@@ -14,7 +14,26 @@ function computerPlay() {
 
 //player round function
 function playerRound(playerSelection, computerSelection) {
+    // if statements for all possible rounds
+    let results = '';
 
+    if(playerSelection.toUpperCase() == 'ROCK' && computerPlay == 'paper'){
+
+    }
+    else if(playerSelection.toUpperCase() == 'PAPER' && computerPlay == 'rock'){
+
+    }
+
+    if(playerSelection.toUpperCase() == 'SCISSORS' && computerPlay == 'paper'){
+
+    }
+    else if(playerSelection.toUpperCase() == 'PAPER' && computerPlay == 'scissors'){
+
+    }    
+
+    if(playerSelection.toUpperCase() == 'PAPER' && computerPlay == '')
+    //return results
+    return results;
 }
 
 //game function
