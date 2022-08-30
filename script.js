@@ -17,11 +17,11 @@ function playerRound(playerSelection, computerSelection) {
     // if statements for all possible rounds
     let results = '';
 
-    if(playerSelection.toUpperCase() == 'ROCK' && computerPlay == 'paper'){
-
+    if(playerSelection.toUpperCase() == 'ROCK' && computerSelection == 'paper'){
+        results = `You lose ${computerSelection.toUpperCase()} beats ${playerSelection.toUpperCase()}`
     }
-    else if(playerSelection.toUpperCase() == 'PAPER' && computerPlay == 'rock'){
-
+    else if(playerSelection.toUpperCase() == 'PAPER' && computerSelection == 'rock'){
+        results = `You win ${playerSelection.toUpperCase()} beats ${computerSelection.toUpperCase()}`
     }
 
     if(playerSelection.toUpperCase() == 'SCISSORS' && computerPlay == 'paper'){
