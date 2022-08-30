@@ -2,12 +2,13 @@
 
 //computer function
 function computerPlay(rock, paper, scissors) {
-    let result;
-    result = rock, paper, scissors;
-    return result;
+    // let result;
+    // result = rock, paper, scissors;
+    // return result;
 }
 
+console.log(computerPlay("Rock", "Paper", "Scissors"));
 //single round game function
-function singleRound(playerSelection,computerSelection) {
+// function singleRound(playerSelection,computerSelection) {
 
-}
+// }
