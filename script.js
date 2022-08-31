@@ -30,9 +30,14 @@ function playerRound(playerSelection, computerSelection) {
     else if (playerSelection.toUpperCase() == 'SCISSORS' && computerSelection == 'paper') {
         results = `You win ${playerSelection.toUpperCase()} beats ${computerSelection.toUpperCase()}`
     }
+    // Rock and scissors
+    if (playerSelection.toUpperCase() == 'SCISSORS' && computerSelection == 'rock') {
+        results = `You lose! ${computerSelection.toUpperCase()} beats ${playerSelection.toUpperCase()}`
+    }
+    else if (playerSelection.toUpperCase() == 'ROCK' && computerSelection == 'paper') {
+        results = `You win! ${playerSelection.toUpperCase()} beats ${computerSelection.toUpperCase()}`
+    }
 
-    // if(playerSelection.toUpperCase() == 'PAPER' && computerPlay == '')
-    //return results
     return results;
 }
 
