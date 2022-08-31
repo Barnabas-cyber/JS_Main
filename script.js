@@ -47,11 +47,11 @@ function game() {
     // for loop 
     for (let i = 0; i < 5; i++) {
         //prompt user 
-        const playerSelection = prompt("");
+        const playerSelection = prompt("Enter Rock, Paper or Scissors:");
         const computerSelection = computerPlay();
 
         //comsole log 
-        console.log(playerRound(playerSelection,computerSelection));
+        console.log(playerRound(playerSelection, computerSelection));
 
     }
 
