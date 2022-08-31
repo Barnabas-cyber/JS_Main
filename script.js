@@ -44,4 +44,15 @@ function playerRound(playerSelection, computerSelection) {
 //game function
 function game() {
 
+    // for loop 
+    for (let i = 0; i < 5; i++) {
+        //prompt user 
+        const playerSelection = prompt("");
+        const computerSelection = computerPlay();
+
+        //comsole log 
+        console.log(playerRound(playerSelection,computerSelection));
+
+    }
+
 }
