@@ -20,9 +20,9 @@ function playerRound(playerSelection, computerSelection) {
     // if statements for all possible rounds
     let results = '';
     // Rock and Paper
-    if (playerSelection.toUpperCase() === computerSelection) {
-        results = `Tie!`
-    }
+    // if (playerSelection.toUpperCase() === computerSelection) {
+    //     results = `Tie!`
+    // }
     if (playerSelection.toUpperCase() == 'ROCK' && computerSelection == 'paper') {
         results = `You lose! ${computerSelection.toUpperCase()} beats ${playerSelection.toUpperCase()}`
         computerScore++;
@@ -64,10 +64,15 @@ function game() {
     //condition that selects winner
     if (playerScore > computerScore) {
         console.log(" You have won!");
-    } else if (playerScore < computerScore) {
+    } else {
+        console.log("Computer has won!");
+    }
+    /* else if (playerScore < computerScore) {
         console.log("The computer has won!");
     } else {
         console.log("It is a tie!");
-    }
+    }*/
 
 }
+//calling the game function
+game();
