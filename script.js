@@ -34,7 +34,7 @@ function playerRound(playerSelection, computerSelection) {
     if (playerSelection.toUpperCase() == 'SCISSORS' && computerSelection == 'rock') {
         results = `You lose! ${computerSelection.toUpperCase()} beats ${playerSelection.toUpperCase()}`
     }
-    else if (playerSelection.toUpperCase() == 'ROCK' && computerSelection == 'paper') {
+    else if (playerSelection.toUpperCase() == 'ROCK' && computerSelection == 'scissors') {
         results = `You win! ${playerSelection.toUpperCase()} beats ${computerSelection.toUpperCase()}`
     }
 
