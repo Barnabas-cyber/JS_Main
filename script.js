@@ -1,5 +1,8 @@
 //JS rock, paper or scissors game
 
+//score counting variables
+let playerScore = 0, computerScore = 0;
+
 //computer function
 function computerPlay() {
     // Name list 
@@ -19,11 +22,12 @@ function playerRound(playerSelection, computerSelection) {
     // Rock and Paper
     if (playerSelection.toUpperCase() == 'ROCK' && computerSelection == 'paper') {
         results = `You lose! ${computerSelection.toUpperCase()} beats ${playerSelection.toUpperCase()}`
+        computerScore++;
     }
     else if (playerSelection.toUpperCase() == 'PAPER' && computerSelection == 'rock') {
         results = `You win! ${playerSelection.toUpperCase()} beats ${computerSelection.toUpperCase()}`
+        playerScore++;
     }
-    //Scissors and paper
     if (playerSelection.toUpperCase() == 'PAPER' && computerSelection == 'scissors') {
         results = `You lose! ${computerSelection.toUpperCase()} beats ${playerSelection.toUpperCase()}`
     }
@@ -54,5 +58,10 @@ function game() {
         console.log(playerRound(playerSelection, computerSelection));
 
     }
+    //condition that selects winner
+    if (playerScore > computerScore) {
+        console.log(" You have won!");
+    } else
+        console.log("The computer has won!");
 
 }
