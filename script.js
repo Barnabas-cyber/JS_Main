@@ -16,22 +16,22 @@ function computerPlay() {
 function playerRound(playerSelection, computerSelection) {
     // if statements for all possible rounds
     let results = '';
-
-    if(playerSelection.toUpperCase() == 'ROCK' && computerSelection == 'paper'){
-        results = `You lose ${computerSelection.toUpperCase()} beats ${playerSelection.toUpperCase()}`
+    // Rock and Paper
+    if (playerSelection.toUpperCase() == 'ROCK' && computerSelection == 'paper') {
+        results = `You lose! ${computerSelection.toUpperCase()} beats ${playerSelection.toUpperCase()}`
     }
-    else if(playerSelection.toUpperCase() == 'PAPER' && computerSelection == 'rock'){
+    else if (playerSelection.toUpperCase() == 'PAPER' && computerSelection == 'rock') {
+        results = `You win! ${playerSelection.toUpperCase()} beats ${computerSelection.toUpperCase()}`
+    }
+    //Scissors and paper
+    if (playerSelection.toUpperCase() == 'PAPER' && computerSelection == 'scissors') {
+        results = `You lose! ${computerSelection.toUpperCase()} beats ${playerSelection.toUpperCase()}`
+    }
+    else if (playerSelection.toUpperCase() == 'SCISSORS' && computerSelection == 'paper') {
         results = `You win ${playerSelection.toUpperCase()} beats ${computerSelection.toUpperCase()}`
     }
 
-    if(playerSelection.toUpperCase() == 'SCISSORS' && computerPlay == 'paper'){
-
-    }
-    else if(playerSelection.toUpperCase() == 'PAPER' && computerPlay == 'scissors'){
-
-    }    
-
-    if(playerSelection.toUpperCase() == 'PAPER' && computerPlay == '')
+    // if(playerSelection.toUpperCase() == 'PAPER' && computerPlay == '')
     //return results
     return results;
 }
