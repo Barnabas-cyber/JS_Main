@@ -68,9 +68,7 @@ function game() {
     //condition that selects winner
     if (playerScore > computerScore) {
         console.log(" You have won!");
-    } /* else {
-        console.log("Computer has won!");
-    }*/
+    }
     else if (playerScore < computerScore) {
         console.log("The computer has won!");
     } else {
