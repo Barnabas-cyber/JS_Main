@@ -20,9 +20,6 @@ function playerRound(playerSelection, computerSelection) {
     // if statements for all possible rounds
     let results = '';
     // Rock and Paper
-    // if (playerSelection.toUpperCase() === computerSelection) {
-    //     results = `Tie!`
-    // }
     if (playerSelection.toUpperCase() == 'ROCK' && computerSelection == 'paper') {
         results = `You lose! ${computerSelection.toUpperCase()} beats ${playerSelection.toUpperCase()}`
         computerScore++;
@@ -31,18 +28,25 @@ function playerRound(playerSelection, computerSelection) {
         results = `You win! ${playerSelection.toUpperCase()} beats ${computerSelection.toUpperCase()}`
         playerScore++;
     }
-    if (playerSelection.toUpperCase() == 'PAPER' && computerSelection == 'scissors') {
+    //Paper and scissors
+    else if (playerSelection.toUpperCase() == 'PAPER' && computerSelection == 'scissors') {
         results = `You lose! ${computerSelection.toUpperCase()} beats ${playerSelection.toUpperCase()}`
+        computerScore++;
     }
     else if (playerSelection.toUpperCase() == 'SCISSORS' && computerSelection == 'paper') {
         results = `You win ${playerSelection.toUpperCase()} beats ${computerSelection.toUpperCase()}`
+        playerScore++;
     }
     // Rock and scissors
-    if (playerSelection.toUpperCase() == 'SCISSORS' && computerSelection == 'rock') {
+    else if (playerSelection.toUpperCase() == 'SCISSORS' && computerSelection == 'rock') {
         results = `You lose! ${computerSelection.toUpperCase()} beats ${playerSelection.toUpperCase()}`
+        computerScore++;
     }
     else if (playerSelection.toUpperCase() == 'ROCK' && computerSelection == 'scissors') {
         results = `You win! ${playerSelection.toUpperCase()} beats ${computerSelection.toUpperCase()}`
+        playerScore++;
+    } else {
+        console.log("It's a tie!");
     }
 
     return results;
@@ -64,14 +68,14 @@ function game() {
     //condition that selects winner
     if (playerScore > computerScore) {
         console.log(" You have won!");
-    } else {
+    } /* else {
         console.log("Computer has won!");
-    }
-    /* else if (playerScore < computerScore) {
+    }*/
+    else if (playerScore < computerScore) {
         console.log("The computer has won!");
     } else {
         console.log("It is a tie!");
-    }*/
+    }
 
 }
 //calling the game function
