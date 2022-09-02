@@ -46,7 +46,7 @@ function playerRound(playerSelection, computerSelection) {
         results = `You win! ${playerSelection.toUpperCase()} beats ${computerSelection.toUpperCase()}`
         playerScore++;
     } else {
-        console.log("It's a tie!");
+        results = `It's a tie!`
     }
 
     return results;
@@ -61,7 +61,7 @@ function game() {
         const playerSelection = prompt("Enter Rock, Paper or Scissors:");
         const computerSelection = computerPlay();
 
-        //comsole log 
+        //console log 
         console.log(playerRound(playerSelection, computerSelection));
 
     }
