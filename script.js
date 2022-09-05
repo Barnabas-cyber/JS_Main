@@ -45,8 +45,6 @@ function playerRound(playerSelection, computerSelection) {
     else if (playerSelection.toUpperCase() == 'ROCK' && computerSelection == 'scissors') {
         results = `You win! ${playerSelection.toUpperCase()} beats ${computerSelection.toUpperCase()}`
         playerScore++;
-    } else {
-        results = `It's a tie!`
     }
 
     return results;
@@ -57,13 +55,21 @@ function game() {
 
     // for loop 
     for (let i = 0; i < 5; i++) {
-        //prompt user 
-        const playerSelection = prompt("Enter Rock, Paper or Scissors:");
-        const computerSelection = computerPlay();
-
-        //console log 
-        console.log(playerRound(playerSelection, computerSelection));
-
+        let flag = true;
+        while (flag) {
+            //prompt for input
+            const playerSelection = prompt("Enter Rock, Paper or Scissors:");
+            //computer output
+            const computerSelection = computerPlay();
+            if (!playerRound(playerSelection, computerSelection)) {
+                //prompt user for coreect input values           
+                console.log("Please enter a valid input:");
+            } else {
+                //console log 
+                console.log(playerRound(playerSelection, computerSelection));
+                flag = false;
+            }
+        }
     }
     //condition that selects winner
     if (playerScore > computerScore) {
