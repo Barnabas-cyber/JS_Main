@@ -20,7 +20,10 @@ function playerRound(playerSelection, computerSelection) {
     // if statements for all possible rounds
     let results = '';
     // Rock and Paper
-    if (playerSelection.toUpperCase() == 'ROCK' && computerSelection == 'paper') {
+    if (playerSelection.toUpperCase() == computerSelection) {
+        results = `It is a tie!`
+    }
+    else if (playerSelection.toUpperCase() == 'ROCK' && computerSelection == 'paper') {
         results = `You lose! ${computerSelection.toUpperCase()} beats ${playerSelection.toUpperCase()}`
         computerScore++;
     }
